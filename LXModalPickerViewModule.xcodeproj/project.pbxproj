@@ -3,27 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A486BE65A568C5ACDBEBF79 /* Pods_LXModalPickerViewModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A472628B1DFDBE3F60ABE8 /* Pods_LXModalPickerViewModule.framework */; };
 		7679DC8E24E7B53100A456AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7679DC8D24E7B53100A456AB /* AppDelegate.swift */; };
-		7679DC9024E7B53100A456AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7679DC8F24E7B53100A456AB /* SceneDelegate.swift */; };
 		7679DC9224E7B53100A456AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7679DC9124E7B53100A456AB /* ViewController.swift */; };
-		7679DC9524E7B53100A456AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7679DC9324E7B53100A456AB /* Main.storyboard */; };
 		7679DC9724E7B53300A456AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7679DC9624E7B53300A456AB /* Assets.xcassets */; };
 		7679DC9A24E7B53300A456AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7679DC9824E7B53300A456AB /* LaunchScreen.storyboard */; };
+		7679DCA324E7B78800A456AB /* LXModalPickerViewManager.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 7679DCA224E7B78800A456AB /* LXModalPickerViewManager.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		57A472628B1DFDBE3F60ABE8 /* Pods_LXModalPickerViewModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LXModalPickerViewModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7679DC8A24E7B53100A456AB /* LXModalPickerViewModule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LXModalPickerViewModule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7679DC8D24E7B53100A456AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7679DC8F24E7B53100A456AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7679DC9124E7B53100A456AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7679DC9424E7B53100A456AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7679DC9624E7B53300A456AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7679DC9924E7B53300A456AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7679DC9B24E7B53300A456AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7679DCA224E7B78800A456AB /* LXModalPickerViewManager.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LXModalPickerViewManager.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9975C556F2E090C56F7B5296 /* Pods-LXModalPickerViewModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LXModalPickerViewModule.release.xcconfig"; path = "Target Support Files/Pods-LXModalPickerViewModule/Pods-LXModalPickerViewModule.release.xcconfig"; sourceTree = "<group>"; };
+		9B260E4E44A838596B6192F9 /* Pods-LXModalPickerViewModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LXModalPickerViewModule.debug.xcconfig"; path = "Target Support Files/Pods-LXModalPickerViewModule/Pods-LXModalPickerViewModule.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A486BE65A568C5ACDBEBF79 /* Pods_LXModalPickerViewModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +43,11 @@
 		7679DC8124E7B53100A456AB = {
 			isa = PBXGroup;
 			children = (
+				7679DCA224E7B78800A456AB /* LXModalPickerViewManager.podspec */,
 				7679DC8C24E7B53100A456AB /* LXModalPickerViewModule */,
 				7679DC8B24E7B53100A456AB /* Products */,
+				D1CA966F3568D4AEFB76EFF7 /* Pods */,
+				878848703E868CFB45AAD68A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +63,29 @@
 			isa = PBXGroup;
 			children = (
 				7679DC8D24E7B53100A456AB /* AppDelegate.swift */,
-				7679DC8F24E7B53100A456AB /* SceneDelegate.swift */,
 				7679DC9124E7B53100A456AB /* ViewController.swift */,
-				7679DC9324E7B53100A456AB /* Main.storyboard */,
 				7679DC9624E7B53300A456AB /* Assets.xcassets */,
 				7679DC9824E7B53300A456AB /* LaunchScreen.storyboard */,
 				7679DC9B24E7B53300A456AB /* Info.plist */,
 			);
 			path = LXModalPickerViewModule;
+			sourceTree = "<group>";
+		};
+		878848703E868CFB45AAD68A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57A472628B1DFDBE3F60ABE8 /* Pods_LXModalPickerViewModule.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D1CA966F3568D4AEFB76EFF7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B260E4E44A838596B6192F9 /* Pods-LXModalPickerViewModule.debug.xcconfig */,
+				9975C556F2E090C56F7B5296 /* Pods-LXModalPickerViewModule.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7679DC9E24E7B53300A456AB /* Build configuration list for PBXNativeTarget "LXModalPickerViewModule" */;
 			buildPhases = (
+				3AD616D38288EF76CFFDB063 /* [CP] Check Pods Manifest.lock */,
 				7679DC8624E7B53100A456AB /* Sources */,
 				7679DC8724E7B53100A456AB /* Frameworks */,
 				7679DC8824E7B53100A456AB /* Resources */,
+				429EA9AFFC94D9F388CA234A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,12 +149,54 @@
 			buildActionMask = 2147483647;
 			files = (
 				7679DC9A24E7B53300A456AB /* LaunchScreen.storyboard in Resources */,
+				7679DCA324E7B78800A456AB /* LXModalPickerViewManager.podspec in Resources */,
 				7679DC9724E7B53300A456AB /* Assets.xcassets in Resources */,
-				7679DC9524E7B53100A456AB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3AD616D38288EF76CFFDB063 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LXModalPickerViewModule-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		429EA9AFFC94D9F388CA234A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LXModalPickerViewModule/Pods-LXModalPickerViewModule-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LXModalPickerViewModule/Pods-LXModalPickerViewModule-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LXModalPickerViewModule/Pods-LXModalPickerViewModule-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7679DC8624E7B53100A456AB /* Sources */ = {
@@ -140,21 +205,12 @@
 			files = (
 				7679DC9224E7B53100A456AB /* ViewController.swift in Sources */,
 				7679DC8E24E7B53100A456AB /* AppDelegate.swift in Sources */,
-				7679DC9024E7B53100A456AB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7679DC9324E7B53100A456AB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7679DC9424E7B53100A456AB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7679DC9824E7B53300A456AB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,10 +338,13 @@
 		};
 		7679DC9F24E7B53300A456AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B260E4E44A838596B6192F9 /* Pods-LXModalPickerViewModule.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R4ACXVJNVR;
 				INFOPLIST_FILE = LXModalPickerViewModule/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,10 +358,13 @@
 		};
 		7679DCA024E7B53300A456AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9975C556F2E090C56F7B5296 /* Pods-LXModalPickerViewModule.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R4ACXVJNVR;
 				INFOPLIST_FILE = LXModalPickerViewModule/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

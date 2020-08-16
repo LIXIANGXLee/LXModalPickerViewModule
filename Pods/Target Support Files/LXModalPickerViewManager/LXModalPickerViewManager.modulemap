@@ -1,0 +1,6 @@
+framework module LXModalPickerViewManager {
+  umbrella header "LXModalPickerViewManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

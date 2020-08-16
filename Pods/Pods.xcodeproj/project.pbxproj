@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14BE6DEBB8D9BB6D7AA5EF18AA4B51FC /* LXModalPickerViewManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FEF6DF03424CEF904A9A4463639F6D6B /* LXModalPickerViewManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1941E60D5C115B9401AF611F3A37C00E /* LXModalPickerView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7912AB000DE1A801B88A3D71D0E37B51 /* LXModalPickerView+Extension.swift */; };
+		1E0B4C2170D1E8F97EB4CF3D8D5D6087 /* Pods-LXModalPickerViewModule-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D5164E62C7CDFAABFFA0E077968C0A7 /* Pods-LXModalPickerViewModule-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		280C21B3772363D5715D836B7E5EE834 /* LXModalPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E96E959337E56742429C7C9161D4245 /* LXModalPickerViewDelegate.swift */; };
+		503A6EBB8DB5166271AA7976561BD824 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		A04E3CCA293207B1CE3616FD3F170599 /* Pods-LXModalPickerViewModule-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A3655DE9DB21B7FA331F4CDF9002215A /* Pods-LXModalPickerViewModule-dummy.m */; };
+		CB03CB3CFDEC1B6ADD9D16BBD36BC275 /* LXModalPickerViewManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E31428709C72E2F2C0D3C71F05D28C0 /* LXModalPickerViewManager-dummy.m */; };
+		D4925B0EAE6EB7C67C15209122C08D18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		D9410FBD38B1848C3BA5A3A46F1492F3 /* LXModalPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A0C64E6EC1C9F542D5FB4862B5E63D /* LXModalPickerView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EEA0776AA95D20685F58909DA8E45C24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 418069BA62FAA220306046DD2153E31D;
+			remoteInfo = LXModalPickerViewManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		17A0C64E6EC1C9F542D5FB4862B5E63D /* LXModalPickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LXModalPickerView.swift; path = LXModalPickerViewManager/LXModalPickerView.swift; sourceTree = "<group>"; };
+		1E9EB036F4924727EB97B28150102275 /* LXModalPickerViewManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LXModalPickerViewManager.debug.xcconfig; sourceTree = "<group>"; };
+		31661CCDFC29286ACD11244B03CFAC08 /* Pods-LXModalPickerViewModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LXModalPickerViewModule.debug.xcconfig"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4D5164E62C7CDFAABFFA0E077968C0A7 /* Pods-LXModalPickerViewModule-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LXModalPickerViewModule-umbrella.h"; sourceTree = "<group>"; };
+		5563B4255335FC40BF9984BAA53C8C4D /* LXModalPickerViewManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LXModalPickerViewManager.modulemap; sourceTree = "<group>"; };
+		76F41D905972C33BC3969B1AA300F54B /* LXModalPickerViewManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LXModalPickerViewManager.release.xcconfig; sourceTree = "<group>"; };
+		7749F3BA7AC93E27C96E38BA3202FEB9 /* LXModalPickerViewManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LXModalPickerViewManager.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7912AB000DE1A801B88A3D71D0E37B51 /* LXModalPickerView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LXModalPickerView+Extension.swift"; path = "LXModalPickerViewManager/LXModalPickerView+Extension.swift"; sourceTree = "<group>"; };
+		7E31428709C72E2F2C0D3C71F05D28C0 /* LXModalPickerViewManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LXModalPickerViewManager-dummy.m"; sourceTree = "<group>"; };
+		7E96E959337E56742429C7C9161D4245 /* LXModalPickerViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LXModalPickerViewDelegate.swift; path = LXModalPickerViewManager/LXModalPickerViewDelegate.swift; sourceTree = "<group>"; };
+		81154F93D0C255563F7829FC575CF0EF /* Pods-LXModalPickerViewModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LXModalPickerViewModule.release.xcconfig"; sourceTree = "<group>"; };
+		8296A3232F8290DFED8347FD0F4AAABA /* Pods-LXModalPickerViewModule-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LXModalPickerViewModule-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8DDDFC418A6E4C71C9E1CDC3619E260D /* LXModalPickerViewManager-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LXModalPickerViewManager-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FA7CD38D43BD93C60256057E0984BC9 /* Pods-LXModalPickerViewModule-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LXModalPickerViewModule-Info.plist"; sourceTree = "<group>"; };
+		A3655DE9DB21B7FA331F4CDF9002215A /* Pods-LXModalPickerViewModule-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LXModalPickerViewModule-dummy.m"; sourceTree = "<group>"; };
+		A38AB148CEDF1005B665F4A45FF7AD19 /* Pods_LXModalPickerViewModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LXModalPickerViewModule.framework; path = "Pods-LXModalPickerViewModule.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8A0BD499D070CD6885758FEF17730D6 /* LXModalPickerViewManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LXModalPickerViewManager-prefix.pch"; sourceTree = "<group>"; };
+		D9D1C81EAA97377FC609207AC1FBA998 /* Pods-LXModalPickerViewModule-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LXModalPickerViewModule-frameworks.sh"; sourceTree = "<group>"; };
+		EA21FE2CA84901759D8B659DCD4C01EB /* Pods-LXModalPickerViewModule.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LXModalPickerViewModule.modulemap"; sourceTree = "<group>"; };
+		EB42FC4BE1A93FF035C87C7D05D30492 /* Pods-LXModalPickerViewModule-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LXModalPickerViewModule-acknowledgements.plist"; sourceTree = "<group>"; };
+		ED3A2AD202B3C307262B760132206FDC /* LXModalPickerViewManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LXModalPickerViewManager.framework; path = LXModalPickerViewManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEF6DF03424CEF904A9A4463639F6D6B /* LXModalPickerViewManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LXModalPickerViewManager-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13C083ECF28C8AD9E8645713C3153F3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4925B0EAE6EB7C67C15209122C08D18 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AD97B95566B3760241897454C769434 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				503A6EBB8DB5166271AA7976561BD824 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		231913A7CEF769CC54A66A5F05218CAF /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3CD0D0EB4DD8155377547C988EF00096 /* Pods-LXModalPickerViewModule */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3CD0D0EB4DD8155377547C988EF00096 /* Pods-LXModalPickerViewModule */ = {
+			isa = PBXGroup;
+			children = (
+				EA21FE2CA84901759D8B659DCD4C01EB /* Pods-LXModalPickerViewModule.modulemap */,
+				8296A3232F8290DFED8347FD0F4AAABA /* Pods-LXModalPickerViewModule-acknowledgements.markdown */,
+				EB42FC4BE1A93FF035C87C7D05D30492 /* Pods-LXModalPickerViewModule-acknowledgements.plist */,
+				A3655DE9DB21B7FA331F4CDF9002215A /* Pods-LXModalPickerViewModule-dummy.m */,
+				D9D1C81EAA97377FC609207AC1FBA998 /* Pods-LXModalPickerViewModule-frameworks.sh */,
+				9FA7CD38D43BD93C60256057E0984BC9 /* Pods-LXModalPickerViewModule-Info.plist */,
+				4D5164E62C7CDFAABFFA0E077968C0A7 /* Pods-LXModalPickerViewModule-umbrella.h */,
+				31661CCDFC29286ACD11244B03CFAC08 /* Pods-LXModalPickerViewModule.debug.xcconfig */,
+				81154F93D0C255563F7829FC575CF0EF /* Pods-LXModalPickerViewModule.release.xcconfig */,
+			);
+			name = "Pods-LXModalPickerViewModule";
+			path = "Target Support Files/Pods-LXModalPickerViewModule";
+			sourceTree = "<group>";
+		};
+		B74F7CDF2618DA9EBF869C8278E981DA /* LXModalPickerViewManager */ = {
+			isa = PBXGroup;
+			children = (
+				17A0C64E6EC1C9F542D5FB4862B5E63D /* LXModalPickerView.swift */,
+				7912AB000DE1A801B88A3D71D0E37B51 /* LXModalPickerView+Extension.swift */,
+				7E96E959337E56742429C7C9161D4245 /* LXModalPickerViewDelegate.swift */,
+				F932EC42AA44DD8BBCC1B3FE2DEE6D02 /* Pod */,
+				C9FF9C929D87EC88BC2C00FE72D18056 /* Support Files */,
+			);
+			name = LXModalPickerViewManager;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C5EE8B58518D415D15E336D661CF4F5D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED3A2AD202B3C307262B760132206FDC /* LXModalPickerViewManager.framework */,
+				A38AB148CEDF1005B665F4A45FF7AD19 /* Pods_LXModalPickerViewModule.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9FF9C929D87EC88BC2C00FE72D18056 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5563B4255335FC40BF9984BAA53C8C4D /* LXModalPickerViewManager.modulemap */,
+				7E31428709C72E2F2C0D3C71F05D28C0 /* LXModalPickerViewManager-dummy.m */,
+				8DDDFC418A6E4C71C9E1CDC3619E260D /* LXModalPickerViewManager-Info.plist */,
+				C8A0BD499D070CD6885758FEF17730D6 /* LXModalPickerViewManager-prefix.pch */,
+				FEF6DF03424CEF904A9A4463639F6D6B /* LXModalPickerViewManager-umbrella.h */,
+				1E9EB036F4924727EB97B28150102275 /* LXModalPickerViewManager.debug.xcconfig */,
+				76F41D905972C33BC3969B1AA300F54B /* LXModalPickerViewManager.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Pods/Target Support Files/LXModalPickerViewManager";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D4FFBD69C56C39C2EB2BA91347525840 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				C5EE8B58518D415D15E336D661CF4F5D /* Products */,
+				231913A7CEF769CC54A66A5F05218CAF /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4FFBD69C56C39C2EB2BA91347525840 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B74F7CDF2618DA9EBF869C8278E981DA /* LXModalPickerViewManager */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		F932EC42AA44DD8BBCC1B3FE2DEE6D02 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				7749F3BA7AC93E27C96E38BA3202FEB9 /* LXModalPickerViewManager.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		99B72474C733CD4CF4A5C451BF0D8F0D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E0B4C2170D1E8F97EB4CF3D8D5D6087 /* Pods-LXModalPickerViewModule-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3700698C44CC3DD8F29BDB6BF0F0C46 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14BE6DEBB8D9BB6D7AA5EF18AA4B51FC /* LXModalPickerViewManager-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1EA99A3833A66AF446D7B7E1123C7C3C /* Pods-LXModalPickerViewModule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C1ED331CB7B55E1DA046DB2456B789A /* Build configuration list for PBXNativeTarget "Pods-LXModalPickerViewModule" */;
+			buildPhases = (
+				99B72474C733CD4CF4A5C451BF0D8F0D /* Headers */,
+				CC30A2EFFC67E1D8EEAA41203E2A8A49 /* Sources */,
+				6AD97B95566B3760241897454C769434 /* Frameworks */,
+				C43C351649622A8D3A1D4BA1EAB9E4FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D1AEE31D9A01FD83607D7748C58A013 /* PBXTargetDependency */,
+			);
+			name = "Pods-LXModalPickerViewModule";
+			productName = "Pods-LXModalPickerViewModule";
+			productReference = A38AB148CEDF1005B665F4A45FF7AD19 /* Pods_LXModalPickerViewModule.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		418069BA62FAA220306046DD2153E31D /* LXModalPickerViewManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 440C9D26B681C37BE136EBABE3453425 /* Build configuration list for PBXNativeTarget "LXModalPickerViewManager" */;
+			buildPhases = (
+				D3700698C44CC3DD8F29BDB6BF0F0C46 /* Headers */,
+				307BA89E67215650C9A07C6C7A810065 /* Sources */,
+				13C083ECF28C8AD9E8645713C3153F3E /* Frameworks */,
+				223B3AC499E7C677F9A7934B404FD8B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LXModalPickerViewManager;
+			productName = LXModalPickerViewManager;
+			productReference = ED3A2AD202B3C307262B760132206FDC /* LXModalPickerViewManager.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = C5EE8B58518D415D15E336D661CF4F5D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				418069BA62FAA220306046DD2153E31D /* LXModalPickerViewManager */,
+				1EA99A3833A66AF446D7B7E1123C7C3C /* Pods-LXModalPickerViewModule */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		223B3AC499E7C677F9A7934B404FD8B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C43C351649622A8D3A1D4BA1EAB9E4FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		307BA89E67215650C9A07C6C7A810065 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1941E60D5C115B9401AF611F3A37C00E /* LXModalPickerView+Extension.swift in Sources */,
+				D9410FBD38B1848C3BA5A3A46F1492F3 /* LXModalPickerView.swift in Sources */,
+				280C21B3772363D5715D836B7E5EE834 /* LXModalPickerViewDelegate.swift in Sources */,
+				CB03CB3CFDEC1B6ADD9D16BBD36BC275 /* LXModalPickerViewManager-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC30A2EFFC67E1D8EEAA41203E2A8A49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A04E3CCA293207B1CE3616FD3F170599 /* Pods-LXModalPickerViewModule-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9D1AEE31D9A01FD83607D7748C58A013 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LXModalPickerViewManager;
+			target = 418069BA62FAA220306046DD2153E31D /* LXModalPickerViewManager */;
+			targetProxy = EEA0776AA95D20685F58909DA8E45C24 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1422B121EAEAEA11307496903FA623C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		31E88238A6B08FF9C1782A7A061E40B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76F41D905972C33BC3969B1AA300F54B /* LXModalPickerViewManager.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LXModalPickerViewManager/LXModalPickerViewManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LXModalPickerViewManager/LXModalPickerViewManager-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LXModalPickerViewManager/LXModalPickerViewManager.modulemap";
+				PRODUCT_MODULE_NAME = LXModalPickerViewManager;
+				PRODUCT_NAME = LXModalPickerViewManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		ABB31922685BD3EBA8BD49843B975F33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31661CCDFC29286ACD11244B03CFAC08 /* Pods-LXModalPickerViewModule.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LXModalPickerViewModule/Pods-LXModalPickerViewModule-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LXModalPickerViewModule/Pods-LXModalPickerViewModule.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CA5B086D75F1722A2A73D648187D4886 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81154F93D0C255563F7829FC575CF0EF /* Pods-LXModalPickerViewModule.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LXModalPickerViewModule/Pods-LXModalPickerViewModule-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LXModalPickerViewModule/Pods-LXModalPickerViewModule.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		ED7888FA6713EABBF66D26A8003AD1CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		F510CE47E6A2EC755C929D6ECAA5BF4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E9EB036F4924727EB97B28150102275 /* LXModalPickerViewManager.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LXModalPickerViewManager/LXModalPickerViewManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LXModalPickerViewManager/LXModalPickerViewManager-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LXModalPickerViewManager/LXModalPickerViewManager.modulemap";
+				PRODUCT_MODULE_NAME = LXModalPickerViewManager;
+				PRODUCT_NAME = LXModalPickerViewManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		440C9D26B681C37BE136EBABE3453425 /* Build configuration list for PBXNativeTarget "LXModalPickerViewManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F510CE47E6A2EC755C929D6ECAA5BF4E /* Debug */,
+				31E88238A6B08FF9C1782A7A061E40B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED7888FA6713EABBF66D26A8003AD1CA /* Debug */,
+				1422B121EAEAEA11307496903FA623C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C1ED331CB7B55E1DA046DB2456B789A /* Build configuration list for PBXNativeTarget "Pods-LXModalPickerViewModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABB31922685BD3EBA8BD49843B975F33 /* Debug */,
+				CA5B086D75F1722A2A73D648187D4886 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
