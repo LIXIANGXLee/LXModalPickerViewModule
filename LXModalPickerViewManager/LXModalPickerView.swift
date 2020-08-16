@@ -12,7 +12,8 @@ import UIKit
 public class LXModalPickerView: UIView,LXModalPickerViewCommomDelegate {
 
     /// 自定义构造器
-   public init(_ frame: CGRect = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)) {
+    public init(_ frame: CGRect = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height),style: UITableView.Style = .plain) {
+        self.style = style
         super.init(frame: frame)
         self.frame = frame
         
@@ -43,7 +44,7 @@ public class LXModalPickerView: UIView,LXModalPickerViewCommomDelegate {
     
     /// 延迟属性 加载内容
     internal lazy var tableView: UITableView = {
-         let tableView = UITableView(frame: CGRect.zero, style: .plain)
+         let tableView = UITableView(frame: CGRect.zero, style: self.style)
         /// 设置背景色
          tableView.backgroundColor = UIColor.white
          /// 取消cell分割线
@@ -134,9 +135,20 @@ public class LXModalPickerView: UIView,LXModalPickerViewCommomDelegate {
     /// 默认是true 点击背景事件 dismiss
     public var isDismissOfDidSelectBgView: Bool = true
     
+    /// 添加tableView 内边距 推荐在 style == style: UITableView.Style.grouped 场景使用 
+    public var contentBottomInset: CGFloat? {
+        didSet {
+            guard let contentBottomInset = contentBottomInset else { return }
+            self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: contentBottomInset, right: 0)
+        }
+    }
+    
     /// 记录默认 tableView 滚动偏移量
     internal var tableViewOriginContentOffSetY: CGFloat = 0
     
+    
+    ///内容分组 和 不分组
+    private var style: UITableView.Style
     
 }
 

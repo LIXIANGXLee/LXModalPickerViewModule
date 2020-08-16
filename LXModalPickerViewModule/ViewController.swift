@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     @objc private func buttonAction() {
         
         print("弹窗")
-       let  modal = LXModalPickerView()
+        let  modal = LXModalPickerView(style: UITableView.Style.grouped)
            modal.delegate = self
            modal.dataSouce = self
            modal.viewOpaque = 0.5
@@ -42,8 +42,10 @@ class ViewController: UIViewController {
         
 //        modal.isDismissOfDidSelectBgView = false
    
+        
           modal.show()
         
+          modal.contentBottomInset = 200
          
           let tableheader = UIImageView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 260))
           tableheader.image = UIImage(named: "timg")
