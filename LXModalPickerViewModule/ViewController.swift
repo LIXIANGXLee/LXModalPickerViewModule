@@ -41,7 +41,13 @@ class ViewController: UIViewController {
 //        modal.contentViewMaxY = UIScreen.main.bounds.height * 0.75
         
 //        modal.isDismissOfDidSelectBgView = false
-   
+       
+        
+        
+          let header = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 120))
+          header.backgroundColor = UIColor.orange
+          modal.bgHeaderView =  header
+
         
           modal.show()
         
@@ -50,6 +56,8 @@ class ViewController: UIViewController {
           let tableheader = UIImageView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 260))
           tableheader.image = UIImage(named: "timg")
           modal.tableHeaderView = tableheader
+        
+ 
         
     }
 
@@ -67,6 +75,10 @@ extension ViewController: LXModalPickerViewDelegate {
     
     func modalPickerView(_ modalPickerView: LXModalPickerView, tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+        
+    func modalPickerView(_ modalPickerView: LXModalPickerView, tableView: UITableView, scrollViewDidScroll offSetY: CGFloat, isFirst: Bool, isTop: Bool) {
+          print("=-=-=-=-=-==\(offSetY)====\(isFirst)=====\(isTop)")
     }
     
     func modalPickerView(_ modalPickerView: LXModalPickerView, tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

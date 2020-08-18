@@ -26,6 +26,12 @@ internal protocol LXModalPickerViewCommomDelegate {}
     /// cell点击事件
     @objc optional func modalPickerView(_ modalPickerView: LXModalPickerView, tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     
+    ///滚动事件
+    /// isTop == true 滚动到顶部
+    /// offSet 滑动内容偏移量。tableView 的Y坐标变化
+    /// isFirst == true 开始动画 isFirst == false 开始动画后的滑动
+    @objc optional func modalPickerView(_ modalPickerView: LXModalPickerView, tableView: UITableView, scrollViewDidScroll offSetY: CGFloat, isFirst: Bool, isTop: Bool)
+    
 }
 
 // MARK: - 协议  资源

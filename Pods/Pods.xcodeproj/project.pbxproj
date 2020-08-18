@@ -3,19 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14BE6DEBB8D9BB6D7AA5EF18AA4B51FC /* LXModalPickerViewManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FEF6DF03424CEF904A9A4463639F6D6B /* LXModalPickerViewManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1941E60D5C115B9401AF611F3A37C00E /* LXModalPickerView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7912AB000DE1A801B88A3D71D0E37B51 /* LXModalPickerView+Extension.swift */; };
+		14BE6DEBB8D9BB6D7AA5EF18AA4B51FC /* LXModalPickerViewManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 830F9680AE4A63A1F45AC366C354F02A /* LXModalPickerViewManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1941E60D5C115B9401AF611F3A37C00E /* LXModalPickerView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE3D96628C910ECEE536577B5F5239C /* LXModalPickerView+Extension.swift */; };
 		1E0B4C2170D1E8F97EB4CF3D8D5D6087 /* Pods-LXModalPickerViewModule-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D5164E62C7CDFAABFFA0E077968C0A7 /* Pods-LXModalPickerViewModule-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		280C21B3772363D5715D836B7E5EE834 /* LXModalPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E96E959337E56742429C7C9161D4245 /* LXModalPickerViewDelegate.swift */; };
+		280C21B3772363D5715D836B7E5EE834 /* LXModalPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E478FFD73D035B1E48BEABD5AA4C866 /* LXModalPickerViewDelegate.swift */; };
 		503A6EBB8DB5166271AA7976561BD824 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		A04E3CCA293207B1CE3616FD3F170599 /* Pods-LXModalPickerViewModule-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A3655DE9DB21B7FA331F4CDF9002215A /* Pods-LXModalPickerViewModule-dummy.m */; };
-		CB03CB3CFDEC1B6ADD9D16BBD36BC275 /* LXModalPickerViewManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E31428709C72E2F2C0D3C71F05D28C0 /* LXModalPickerViewManager-dummy.m */; };
+		CB03CB3CFDEC1B6ADD9D16BBD36BC275 /* LXModalPickerViewManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C74C91B74E2513890C2FC091EC9EC7B6 /* LXModalPickerViewManager-dummy.m */; };
 		D4925B0EAE6EB7C67C15209122C08D18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		D9410FBD38B1848C3BA5A3A46F1492F3 /* LXModalPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A0C64E6EC1C9F542D5FB4862B5E63D /* LXModalPickerView.swift */; };
+		D9410FBD38B1848C3BA5A3A46F1492F3 /* LXModalPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C7335E9BDCE127450B9893D5B27FF /* LXModalPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,30 +29,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		17A0C64E6EC1C9F542D5FB4862B5E63D /* LXModalPickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LXModalPickerView.swift; path = LXModalPickerViewManager/LXModalPickerView.swift; sourceTree = "<group>"; };
-		1E9EB036F4924727EB97B28150102275 /* LXModalPickerViewManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LXModalPickerViewManager.debug.xcconfig; sourceTree = "<group>"; };
+		03E1844B6AB4E2716C26116605A0ED9F /* LXModalPickerViewManager-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LXModalPickerViewManager-Info.plist"; sourceTree = "<group>"; };
+		044518DF76D0D82DC3CA13230F4584F2 /* LXModalPickerViewManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LXModalPickerViewManager.modulemap; sourceTree = "<group>"; };
 		31661CCDFC29286ACD11244B03CFAC08 /* Pods-LXModalPickerViewModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LXModalPickerViewModule.debug.xcconfig"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3A743FC10D7235383452D1AE6A80B226 /* LXModalPickerViewManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LXModalPickerViewManager.release.xcconfig; sourceTree = "<group>"; };
 		4D5164E62C7CDFAABFFA0E077968C0A7 /* Pods-LXModalPickerViewModule-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LXModalPickerViewModule-umbrella.h"; sourceTree = "<group>"; };
-		5563B4255335FC40BF9984BAA53C8C4D /* LXModalPickerViewManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LXModalPickerViewManager.modulemap; sourceTree = "<group>"; };
-		76F41D905972C33BC3969B1AA300F54B /* LXModalPickerViewManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LXModalPickerViewManager.release.xcconfig; sourceTree = "<group>"; };
-		7749F3BA7AC93E27C96E38BA3202FEB9 /* LXModalPickerViewManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LXModalPickerViewManager.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		7912AB000DE1A801B88A3D71D0E37B51 /* LXModalPickerView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LXModalPickerView+Extension.swift"; path = "LXModalPickerViewManager/LXModalPickerView+Extension.swift"; sourceTree = "<group>"; };
-		7E31428709C72E2F2C0D3C71F05D28C0 /* LXModalPickerViewManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LXModalPickerViewManager-dummy.m"; sourceTree = "<group>"; };
-		7E96E959337E56742429C7C9161D4245 /* LXModalPickerViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LXModalPickerViewDelegate.swift; path = LXModalPickerViewManager/LXModalPickerViewDelegate.swift; sourceTree = "<group>"; };
+		57267BA2B1158DD085339DDEE6F30E46 /* LXModalPickerViewManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LXModalPickerViewManager.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5AE3D96628C910ECEE536577B5F5239C /* LXModalPickerView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LXModalPickerView+Extension.swift"; path = "LXModalPickerViewManager/LXModalPickerView+Extension.swift"; sourceTree = "<group>"; };
+		5E478FFD73D035B1E48BEABD5AA4C866 /* LXModalPickerViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LXModalPickerViewDelegate.swift; path = LXModalPickerViewManager/LXModalPickerViewDelegate.swift; sourceTree = "<group>"; };
 		81154F93D0C255563F7829FC575CF0EF /* Pods-LXModalPickerViewModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LXModalPickerViewModule.release.xcconfig"; sourceTree = "<group>"; };
 		8296A3232F8290DFED8347FD0F4AAABA /* Pods-LXModalPickerViewModule-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LXModalPickerViewModule-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8DDDFC418A6E4C71C9E1CDC3619E260D /* LXModalPickerViewManager-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LXModalPickerViewManager-Info.plist"; sourceTree = "<group>"; };
+		830F9680AE4A63A1F45AC366C354F02A /* LXModalPickerViewManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LXModalPickerViewManager-umbrella.h"; sourceTree = "<group>"; };
+		9B21ED81F81D25395CE8AD2B21E9B6F1 /* LXModalPickerViewManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LXModalPickerViewManager-prefix.pch"; sourceTree = "<group>"; };
+		9BB330FEF19A90409F716D4CE9E45B35 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F9E28A817811D8C39DCC8B660D343FA /* LXModalPickerViewManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LXModalPickerViewManager.debug.xcconfig; sourceTree = "<group>"; };
 		9FA7CD38D43BD93C60256057E0984BC9 /* Pods-LXModalPickerViewModule-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LXModalPickerViewModule-Info.plist"; sourceTree = "<group>"; };
 		A3655DE9DB21B7FA331F4CDF9002215A /* Pods-LXModalPickerViewModule-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LXModalPickerViewModule-dummy.m"; sourceTree = "<group>"; };
 		A38AB148CEDF1005B665F4A45FF7AD19 /* Pods_LXModalPickerViewModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LXModalPickerViewModule.framework; path = "Pods-LXModalPickerViewModule.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C8A0BD499D070CD6885758FEF17730D6 /* LXModalPickerViewManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LXModalPickerViewManager-prefix.pch"; sourceTree = "<group>"; };
+		C17C7335E9BDCE127450B9893D5B27FF /* LXModalPickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LXModalPickerView.swift; path = LXModalPickerViewManager/LXModalPickerView.swift; sourceTree = "<group>"; };
+		C74C91B74E2513890C2FC091EC9EC7B6 /* LXModalPickerViewManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LXModalPickerViewManager-dummy.m"; sourceTree = "<group>"; };
 		D9D1C81EAA97377FC609207AC1FBA998 /* Pods-LXModalPickerViewModule-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LXModalPickerViewModule-frameworks.sh"; sourceTree = "<group>"; };
 		EA21FE2CA84901759D8B659DCD4C01EB /* Pods-LXModalPickerViewModule.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LXModalPickerViewModule.modulemap"; sourceTree = "<group>"; };
 		EB42FC4BE1A93FF035C87C7D05D30492 /* Pods-LXModalPickerViewModule-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LXModalPickerViewModule-acknowledgements.plist"; sourceTree = "<group>"; };
 		ED3A2AD202B3C307262B760132206FDC /* LXModalPickerViewManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LXModalPickerViewManager.framework; path = LXModalPickerViewManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FEF6DF03424CEF904A9A4463639F6D6B /* LXModalPickerViewManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LXModalPickerViewManager-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,17 +101,26 @@
 			path = "Target Support Files/Pods-LXModalPickerViewModule";
 			sourceTree = "<group>";
 		};
-		B74F7CDF2618DA9EBF869C8278E981DA /* LXModalPickerViewManager */ = {
+		5052F4A0F9496AA418AA493D5A601A6F /* LXModalPickerViewManager */ = {
 			isa = PBXGroup;
 			children = (
-				17A0C64E6EC1C9F542D5FB4862B5E63D /* LXModalPickerView.swift */,
-				7912AB000DE1A801B88A3D71D0E37B51 /* LXModalPickerView+Extension.swift */,
-				7E96E959337E56742429C7C9161D4245 /* LXModalPickerViewDelegate.swift */,
-				F932EC42AA44DD8BBCC1B3FE2DEE6D02 /* Pod */,
-				C9FF9C929D87EC88BC2C00FE72D18056 /* Support Files */,
+				C17C7335E9BDCE127450B9893D5B27FF /* LXModalPickerView.swift */,
+				5AE3D96628C910ECEE536577B5F5239C /* LXModalPickerView+Extension.swift */,
+				5E478FFD73D035B1E48BEABD5AA4C866 /* LXModalPickerViewDelegate.swift */,
+				8F0306B03ACF53924E0993BB59D1F3F3 /* Pod */,
+				F97AE582CF7A7224F3D4EC59B0AD4700 /* Support Files */,
 			);
 			name = LXModalPickerViewManager;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		8F0306B03ACF53924E0993BB59D1F3F3 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				57267BA2B1158DD085339DDEE6F30E46 /* LXModalPickerViewManager.podspec */,
+				9BB330FEF19A90409F716D4CE9E45B35 /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -128,21 +138,6 @@
 				A38AB148CEDF1005B665F4A45FF7AD19 /* Pods_LXModalPickerViewModule.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		C9FF9C929D87EC88BC2C00FE72D18056 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				5563B4255335FC40BF9984BAA53C8C4D /* LXModalPickerViewManager.modulemap */,
-				7E31428709C72E2F2C0D3C71F05D28C0 /* LXModalPickerViewManager-dummy.m */,
-				8DDDFC418A6E4C71C9E1CDC3619E260D /* LXModalPickerViewManager-Info.plist */,
-				C8A0BD499D070CD6885758FEF17730D6 /* LXModalPickerViewManager-prefix.pch */,
-				FEF6DF03424CEF904A9A4463639F6D6B /* LXModalPickerViewManager-umbrella.h */,
-				1E9EB036F4924727EB97B28150102275 /* LXModalPickerViewManager.debug.xcconfig */,
-				76F41D905972C33BC3969B1AA300F54B /* LXModalPickerViewManager.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Pods/Target Support Files/LXModalPickerViewManager";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -167,17 +162,24 @@
 		D4FFBD69C56C39C2EB2BA91347525840 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B74F7CDF2618DA9EBF869C8278E981DA /* LXModalPickerViewManager */,
+				5052F4A0F9496AA418AA493D5A601A6F /* LXModalPickerViewManager */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		F932EC42AA44DD8BBCC1B3FE2DEE6D02 /* Pod */ = {
+		F97AE582CF7A7224F3D4EC59B0AD4700 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7749F3BA7AC93E27C96E38BA3202FEB9 /* LXModalPickerViewManager.podspec */,
+				044518DF76D0D82DC3CA13230F4584F2 /* LXModalPickerViewManager.modulemap */,
+				C74C91B74E2513890C2FC091EC9EC7B6 /* LXModalPickerViewManager-dummy.m */,
+				03E1844B6AB4E2716C26116605A0ED9F /* LXModalPickerViewManager-Info.plist */,
+				9B21ED81F81D25395CE8AD2B21E9B6F1 /* LXModalPickerViewManager-prefix.pch */,
+				830F9680AE4A63A1F45AC366C354F02A /* LXModalPickerViewManager-umbrella.h */,
+				9F9E28A817811D8C39DCC8B660D343FA /* LXModalPickerViewManager.debug.xcconfig */,
+				3A743FC10D7235383452D1AE6A80B226 /* LXModalPickerViewManager.release.xcconfig */,
 			);
-			name = Pod;
+			name = "Support Files";
+			path = "Pods/Target Support Files/LXModalPickerViewManager";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,7 +251,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -378,7 +380,7 @@
 		};
 		31E88238A6B08FF9C1782A7A061E40B2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 76F41D905972C33BC3969B1AA300F54B /* LXModalPickerViewManager.release.xcconfig */;
+			baseConfigurationReference = 3A743FC10D7235383452D1AE6A80B226 /* LXModalPickerViewManager.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -555,7 +557,7 @@
 		};
 		F510CE47E6A2EC755C929D6ECAA5BF4E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E9EB036F4924727EB97B28150102275 /* LXModalPickerViewManager.debug.xcconfig */;
+			baseConfigurationReference = 9F9E28A817811D8C39DCC8B660D343FA /* LXModalPickerViewManager.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

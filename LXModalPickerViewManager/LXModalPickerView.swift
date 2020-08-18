@@ -143,6 +143,21 @@ public class LXModalPickerView: UIView,LXModalPickerViewCommomDelegate {
         }
     }
     
+    /// 背景的头部。推荐在 show() 函数之前调用
+    public var bgHeaderView: UIView? {
+        didSet {
+            guard let bgHeaderView = bgHeaderView else { return }
+            bgHeaderView.isUserInteractionEnabled = true
+            self.addSubview(bgHeaderView)
+            let panGesture = UIPanGestureRecognizer(target: self, action: #selector(bgPanGesture(_:)))
+            panGesture.delegate = self
+            bgHeaderView.addGestureRecognizer(panGesture)
+            /// Y坐标修改
+            setBgHeaderViewFrameY()
+        }
+    }
+    
+    
     /// 记录默认 tableView 滚动偏移量
     internal var tableViewOriginContentOffSetY: CGFloat = 0
     
@@ -180,21 +195,49 @@ extension LXModalPickerView {
     
     
     /// 手势滑动 事件处理
+    @objc private func bgPanGesture(_ gesture: UIPanGestureRecognizer) {
+        let point = gesture.translation(in: gesture.view)
+
+        ///滑动bgHeaderView的时候 重置 tableView的偏移量
+        if point.y > 0 {
+            self.tableView.contentOffset = CGPoint.zero
+            self.tableViewOriginContentOffSetY = 0
+        }
+        
+        /// 滑动事件处理
+        panGesture(gesture)
+    }
+    
+    /// 滑动事件处理
     @objc private func panGesture(_ gesture: UIPanGestureRecognizer) {
-       
         
         let point = gesture.translation(in: gesture.view)
 
         /// 开始滑动
         if gesture.state == .began {
             self.contentViewOriginY = self.tableView.frame.origin.y
-        }else if gesture.state == .changed { /// 持续滑动修改
-
+        }else if gesture.state == .changed {
+            /// 持续滑动修改tableView 的Y坐标
             self.tableView.frame.origin.y = max(self.contentViewOriginY! + point.y - self.tableViewOriginContentOffSetY, self.contentViewMinY!)
+            /// 布局BgHeaderView 的Y坐标
+            setBgHeaderViewFrameY()
             
         }else { /// 结束 或者 取消滑动
             endAnimation(self.tableView.frame.origin.y)
         }
+    }
+    
+    /// 修改BgHeaderView的Y坐标位置
+    @objc private func setBgHeaderViewFrameY(_ isFirst: Bool = false) {
+        
+        /// 滚动事件 监听回调
+        delegate?.modalPickerView?(self, tableView: tableView, scrollViewDidScroll:  max(self.contentViewMinY!, tableView.frame.origin.y), isFirst: isFirst, isTop: Int(tableView.frame.origin.y) == Int(self.contentViewMinY!))
+        
+        /// 判断bgHeaderView是不是为nil
+        guard let bgHeaderView = bgHeaderView else { return }
+        /// bgHeaderView Y坐标布局
+        bgHeaderView.frame.origin.y = tableView.frame.origin.y - bgHeaderView.frame.height
+        
     }
 }
 
@@ -222,11 +265,16 @@ extension LXModalPickerView {
     private func starAnimation() {
         
           self.backgroundColor = UIColor.black.withAlphaComponent(0.001)
-          self.tableView.frame.origin.y = UIScreen.main.bounds.height
+          self.tableView.frame.origin.y = UIScreen.main.bounds.height + (bgHeaderView?.frame.height ?? 0)
+
+          /// 布局BgHeaderView 的Y坐标
+          self.setBgHeaderViewFrameY()
           UIView.animate(withDuration: animationDuration, animations: {
               self.backgroundColor = UIColor.black.withAlphaComponent(self.viewOpaque!)
               self.tableView.frame.origin.y = self.contentViewOriginY!
-
+            
+              /// 布局BgHeaderView 的Y坐标
+              self.setBgHeaderViewFrameY(true)
           }) { (finish) in
               self.contentViewOriginY = self.tableView.frame.origin.y
           }
@@ -247,9 +295,9 @@ extension LXModalPickerView {
                 }else{
                     self.contentViewOriginY = max(self.tableView.frame.origin.y, self.contentViewMaxY!)
                 }
-                
+
             }else if  y > self.contentViewMaxY! && y <= UIScreen.main.bounds.height{/// 最大和底部的之间
-                
+
                 /// 判断动画结束后的偏移方向
                 let isTop = (y - self.contentViewMaxY! <= UIScreen.main.bounds.height - y) ? true : false
                 self.tableView.frame.origin.y = isTop ? self.contentViewMaxY! : UIScreen.main.bounds.height
@@ -260,6 +308,9 @@ extension LXModalPickerView {
                     self.backgroundColor = UIColor.black.withAlphaComponent(0.001)
                 }
             }
+            
+            /// 布局BgHeaderView 的Y坐标
+            self.setBgHeaderViewFrameY()
             
         }) { (finish) in
             if  y > self.contentViewMaxY! && y <= UIScreen.main.bounds.height{
