@@ -117,7 +117,14 @@ public class LXModalPickerView: UIView,LXModalPickerViewCommomDelegate {
     public var tableHeaderView: UIView? {
         didSet {
             guard let tableHeaderView = tableHeaderView else { return }
+            
+            /// 判断 如果有 setContentHeaderTopCornerRadii 则设置原角
+             if let cornerRadii = setContentHeaderTopCornerRadii  {
+                tableHeaderView.setTopCornerRadii(cornerRadii)
+             }
+            
             self.tableView.tableHeaderView = tableHeaderView
+
         }
     }
     
@@ -139,6 +146,7 @@ public class LXModalPickerView: UIView,LXModalPickerViewCommomDelegate {
             bgHeaderView.addGestureRecognizer(panGesture)
             /// Y坐标修改
             setBgHeaderViewFrameY(false)
+
         }
     }
     
@@ -165,7 +173,24 @@ public class LXModalPickerView: UIView,LXModalPickerViewCommomDelegate {
             self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: contentBottomInset, right: 0)
         }
     }
+    
+    ///设置内容顶部圆角
+    public var setContentHeaderTopCornerRadii: CGFloat? {
+        didSet {
+            guard let cornerRadii = setContentHeaderTopCornerRadii else { return }
+            tableHeaderView?.setTopCornerRadii(cornerRadii)
+        }
+    }
+    
+    /// 设置内容背景色
+    public var setContentBackgroundColor: UIColor? {
+        didSet {
+            guard let backgroundColor = setContentBackgroundColor else { return }
+            self.tableView.backgroundColor = backgroundColor
+        }
         
+    }
+    
     /// 记录默认 tableView 滚动偏移量
     internal var tableViewOriginContentOffSetY: CGFloat = 0
     
