@@ -1,5 +1,5 @@
 PODS:
-  - LXModalPickerViewManager (1.2.0)
+  - LXModalPickerViewManager (1.2.2)
 
 DEPENDENCIES:
   - LXModalPickerViewManager (from `./`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  LXModalPickerViewManager: d9f1250b113380737a9aa39011d904baaa481f26
+  LXModalPickerViewManager: e0e286d4a4976a6b3bf5c1bf0c70c75fbcf05b73
 
 PODFILE CHECKSUM: 78e17c8ba1f506afc30996848f9f2c9cada9f9f5
 

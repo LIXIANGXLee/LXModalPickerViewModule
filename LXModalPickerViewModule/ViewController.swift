@@ -42,21 +42,18 @@ class ViewController: UIViewController {
         
 //        modal.isDismissOfDidSelectBgView = false
        
-        
-        
-          let header = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 120))
-          header.backgroundColor = UIColor.orange
-          modal.bgHeaderView =  header
-
-        
-          modal.show()
-        
-          modal.contentBottomInset = 200
+//        let header = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 120))
+//        header.backgroundColor = UIColor.orange
+//        modal.bgFooterView =  header
          
-          let tableheader = UIImageView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 260))
-          tableheader.image = UIImage(named: "timg")
-          modal.tableHeaderView = tableheader
-        
+        //          modal.contentBottomInset = 200
+                 
+                
+         let tableheader = UIImageView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 260))
+           tableheader.image = UIImage(named: "timg")
+           modal.tableHeaderView = tableheader
+                 
+          modal.show()
  
         
     }
