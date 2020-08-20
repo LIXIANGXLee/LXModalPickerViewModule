@@ -54,7 +54,7 @@ public class LXModalPickerView: UIView,LXModalPickerViewCommomDelegate {
          tableView.delegate = self
          /// 设置滚动时图
          tableView.isScrollEnabled = true
-    
+            
          ///取消 tableHeaderView
          tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 0.01))
          ///取消 tableFooterView
@@ -261,6 +261,9 @@ extension LXModalPickerView {
     }
     
     /// 修改BgHeaderView的Y坐标位置
+    ///
+    /// - Parameters:
+    ///   - isFirst: 为 true时  是首次设置Y坐标
      private func setBgHeaderViewFrameY(_ isFirst: Bool = false) {
         
         /// 滚动事件 监听回调
@@ -274,6 +277,9 @@ extension LXModalPickerView {
     }
     
     /// 修改bgFooterView的Y坐标位置
+    ///
+    /// - Parameters:
+    ///   - isDefault: 为 true时  默认弹出来后的Y坐标
      private func setBgFooterViewFrameY(_ isDefault: Bool = true) {
         /// 判断bgHeaderView是不是为nil
         guard let bgFooterView = bgFooterView else { return }
@@ -281,13 +287,17 @@ extension LXModalPickerView {
     }
     
     /// 设置contentViewOriginY 原y坐标
+    ///
+    /// - Parameters:
+    ///   - isBig: 为 true时 /// contentViewMinY ... self.contentViewMaxY 为false时/// self.contentViewMaxY <.. UIScreen.main.bounds.height
+    ///   - isTop: 为 true时  偏上， 为false 偏下
     private func setContentViewOriginY(_ isBig: Bool, _ isTop: Bool ) {
         
         if isBig { /// contentViewMinY ... self.contentViewMaxY
             
             self.contentViewOriginY = isTop ? self.contentViewMinY! : self.contentViewMaxY!
 
-        }else{ /// self.contentViewMaxY ... UIScreen.main.bounds.height
+        }else{ /// self.contentViewMaxY <.. UIScreen.main.bounds.height
             
              self.contentViewOriginY =  isTop ? self.contentViewMaxY! : UIScreen.main.bounds.height
 
@@ -298,17 +308,92 @@ extension LXModalPickerView {
     }
     
     /// 设置背景色
+    ///
+    /// - Parameters:
+    ///   - isAlpha: 为 true时 /// 表示透明。透明度设置为 0.001 为false时表示自定义透明度viewOpaque的值
     private func  setbackgroundColor(_ isAlpha: Bool) {
         guard let viewOpaque = viewOpaque else { return }
         self.backgroundColor = UIColor.black.withAlphaComponent(isAlpha ? 0.001 : viewOpaque)
     }
 
+/// 开始动画
+   private func starAnimation() {
+       
+         self.tableView.frame.origin.y = UIScreen.main.bounds.height + (bgHeaderView?.frame.height ?? 0)
+       
+          /// 设置背景色
+         setbackgroundColor(true)
+       
+         /// 布局BgHeaderView 的Y坐标
+         setBgHeaderViewFrameY(false)
+
+         /// 布局BgHeaderView 的Y坐标
+         self.setBgFooterViewFrameY(false)
+
+         UIView.animate(withDuration: animationDuration, animations: {
+           
+             self.tableView.frame.origin.y = self.contentViewOriginY!
+           
+               /// 设置背景色
+              self.setbackgroundColor(false)
+              /// 布局BgHeaderView 的Y坐标
+              self.setBgHeaderViewFrameY(true)
+            
+              /// 布局BgHeaderView 的Y坐标
+              self.setBgFooterViewFrameY(true)
+
+         }) { (finish) in
+             self.contentViewOriginY = self.tableView.frame.origin.y
+         }
+   }
+   
+   /// 结束动画
+   private func endAnimation(_ y: CGFloat) {
+       UIView.animate(withDuration: animationDuration, animations: {
+           
+           if y >= self.contentViewMinY! && y <= self.contentViewMaxY! { /// 最大和最小之间
+               
+               /// 判断动画结束后的偏移方向
+               let isTop = (y - self.contentViewMinY! <= self.contentViewMaxY! - y) ? true : false
+               
+               /// 设置原contentViewOriginY 值
+               self.setContentViewOriginY(true, isTop)
+
+           }else if  y > self.contentViewMaxY! && y <= UIScreen.main.bounds.height{/// 最大和底部的之间
+
+               /// 判断动画结束后的偏移方向
+               let isTop = (y - self.contentViewMaxY! <= UIScreen.main.bounds.height - y) ? true : false
+               
+               /// 设置原contentViewOriginY 值
+               self.setContentViewOriginY(false, isTop)
+               
+               if !isTop {
+                  /// 设置背景色
+                   self.setbackgroundColor(true)
+                   /// 布局BgHeaderView 的Y坐标
+                   self.setBgFooterViewFrameY(false)
+               }
+           }
+           
+           /// 布局BgHeaderView 的Y坐标
+           self.setBgHeaderViewFrameY(false)
+           
+       }) { (finish) in
+           if  y > self.contentViewMaxY! && y <= UIScreen.main.bounds.height{
+               let isTop = (y - self.contentViewMaxY! <= UIScreen.main.bounds.height - y) ? true : false
+               if !isTop { self.removeFromSuperview() }
+           }
+       }
+   }
 }
 
 // MARK: - public 函数
 extension LXModalPickerView {
     
     /// 显示modalView
+    ///
+    /// - Parameters:
+    ///   - rootView: 不为nill时，表示传进来了父view ，为nill时 则用aboveViewController?.view做为父view
     public func show(_ rootView: UIView? = nil) {
         
         if rootView != nil {
@@ -328,75 +413,5 @@ extension LXModalPickerView {
         
         /// 结束动画
         endAnimation(UIScreen.main.bounds.height)
-    }
-    
-    /// 开始动画
-    private func starAnimation() {
-        
-          self.tableView.frame.origin.y = UIScreen.main.bounds.height + (bgHeaderView?.frame.height ?? 0)
-        
-           /// 设置背景色
-          setbackgroundColor(true)
-        
-          /// 布局BgHeaderView 的Y坐标
-          setBgHeaderViewFrameY(false)
-
-          /// 布局BgHeaderView 的Y坐标
-          self.setBgFooterViewFrameY(false)
-
-          UIView.animate(withDuration: animationDuration, animations: {
-            
-              self.tableView.frame.origin.y = self.contentViewOriginY!
-            
-                /// 设置背景色
-               self.setbackgroundColor(false)
-               /// 布局BgHeaderView 的Y坐标
-               self.setBgHeaderViewFrameY(true)
-             
-               /// 布局BgHeaderView 的Y坐标
-               self.setBgFooterViewFrameY(true)
-
-          }) { (finish) in
-              self.contentViewOriginY = self.tableView.frame.origin.y
-          }
-    }
-    
-    /// 结束动画
-    private func endAnimation(_ y: CGFloat) {
-        UIView.animate(withDuration: animationDuration, animations: {
-            
-            if y >= self.contentViewMinY! && y <= self.contentViewMaxY! { /// 最大和最小之间
-                
-                /// 判断动画结束后的偏移方向
-                let isTop = (y - self.contentViewMinY! <= self.contentViewMaxY! - y) ? true : false
-                
-                /// 设置原contentViewOriginY 值
-                self.setContentViewOriginY(true, isTop)
-
-            }else if  y > self.contentViewMaxY! && y <= UIScreen.main.bounds.height{/// 最大和底部的之间
-
-                /// 判断动画结束后的偏移方向
-                let isTop = (y - self.contentViewMaxY! <= UIScreen.main.bounds.height - y) ? true : false
-                
-                /// 设置原contentViewOriginY 值
-                self.setContentViewOriginY(false, isTop)
-                
-                if !isTop {
-                   /// 设置背景色
-                    self.setbackgroundColor(true)
-                    /// 布局BgHeaderView 的Y坐标
-                    self.setBgFooterViewFrameY(false)
-                }
-            }
-            
-            /// 布局BgHeaderView 的Y坐标
-            self.setBgHeaderViewFrameY(false)
-            
-        }) { (finish) in
-            if  y > self.contentViewMaxY! && y <= UIScreen.main.bounds.height{
-                let isTop = (y - self.contentViewMaxY! <= UIScreen.main.bounds.height - y) ? true : false
-                if !isTop { self.removeFromSuperview() }
-            }
-        }
     }
 }

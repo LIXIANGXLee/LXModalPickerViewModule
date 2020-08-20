@@ -75,7 +75,7 @@ extension LXModalPickerView:  UIGestureRecognizerDelegate {
 
 // MARK: - UIScrollViewDelegate 函数
 extension LXModalPickerView:  UIScrollViewDelegate {
-
+    
     /// 滚动视图
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y > 0 && Int(self.tableView.frame.origin.y) == Int(self.contentViewMinY!){
