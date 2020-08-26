@@ -86,7 +86,6 @@ public class LXModalPickerView: UIView,LXModalPickerViewCommomDelegate {
             dataSouce?.modalPickerView(self, registerClass: tableView)
         }
     }
-    
     /// 弹出来后 Y坐标 （原始坐标）
     private var contentViewOriginY: CGFloat?
     
@@ -413,5 +412,10 @@ extension LXModalPickerView {
         
         /// 结束动画
         endAnimation(UIScreen.main.bounds.height)
+    }
+    
+    /// 刷新content数据
+    public func reloadData() {
+        self.tableView.reloadData()
     }
 }
