@@ -11,7 +11,6 @@ import UIKit
 // MARK: - UITableViewDelegate 函数
 extension LXModalPickerView: UITableViewDelegate {
     
-    
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return delegate?.modalPickerView?(self, tableView: tableView, heightForRowAt: indexPath) ?? 55
     }
@@ -79,14 +78,20 @@ extension LXModalPickerView:  UIScrollViewDelegate {
     /// 滚动视图
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y > 0 && Int(self.tableView.frame.origin.y) == Int(self.contentViewMinY!){
-
         }else{
-            self.tableView.contentOffset = CGPoint.zero
+            /// 处理滑动顶部bgHeaderView的时候tableView偏移量处理
+            if self.isScrollBgHeaderView {
+                self.tableView.contentOffset = CGPoint(x: 0, y: self.tableViewOriginContentOffSetY)
+            }else {
+                /// 非滑动顶部bgHeaderView的时候tableView偏移量处理
+                self.tableView.contentOffset = CGPoint.zero
+            }
         }
     }
     
     ///开始拖拽
     public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        /// 记录偏移量
         self.tableViewOriginContentOffSetY = self.tableView.contentOffset.y
     }
     

@@ -35,7 +35,7 @@ class ViewController: UIViewController {
            modal.dataSouce = self
            modal.viewOpaque = 0.5
         
-          modal.setContentBackgroundColor = UIColor.clear
+//          modal.setContentBackgroundColor = UIColor.clear
         
 //        modal.animationDuration = 5
 //        modal.contentViewMinY = 0
@@ -52,9 +52,12 @@ class ViewController: UIViewController {
 
                  modal.setContentHeaderTopCornerRadii = 20
                 
-         let tableheader = UIImageView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 260))
+         let tableheader = UIImageView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 80))
+         tableheader.isUserInteractionEnabled = true
            tableheader.image = UIImage(named: "timg")
-           modal.tableHeaderView = tableheader
+        
+        tableheader.setTopCornerRadii(20)
+           modal.bgHeaderView = tableheader
                  
 
           modal.show()

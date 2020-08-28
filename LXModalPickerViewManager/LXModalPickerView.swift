@@ -76,6 +76,7 @@ public class LXModalPickerView: UIView,LXModalPickerViewCommomDelegate {
         return panGesture
     }()
     
+   
     /// 设置当前代理  事件
     public weak var delegate: LXModalPickerViewDelegate?
     
@@ -192,6 +193,9 @@ public class LXModalPickerView: UIView,LXModalPickerViewCommomDelegate {
     
     /// 记录默认 tableView 滚动偏移量
     internal var tableViewOriginContentOffSetY: CGFloat = 0
+   
+    ///滑动的事bgView的头部时 isScrollBgHeaderView == true
+    internal var isScrollBgHeaderView: Bool = false
     
     
     ///内容分组 和 不分组
@@ -216,13 +220,13 @@ extension LXModalPickerView {
 
     }
     
-    /// presented跟控制器
-    private var aboveViewController: UIViewController? {
+    /// presented跟控制器的view
+    private var aboveRootView: UIView? {
         var aboveController = UIApplication.shared.delegate?.window??.rootViewController
         while aboveController?.presentedViewController != nil {
             aboveController = aboveController?.presentedViewController
         }
-        return aboveController
+        return aboveController?.view
     }
     
     
@@ -232,8 +236,7 @@ extension LXModalPickerView {
 
         ///滑动bgHeaderView的时候 重置 tableView的偏移量
         if point.y > 0 {
-            self.tableView.contentOffset = CGPoint.zero
-            self.tableViewOriginContentOffSetY = 0
+            self.isScrollBgHeaderView = true
         }
         
         /// 滑动事件处理
@@ -250,11 +253,13 @@ extension LXModalPickerView {
             self.contentViewOriginY = self.tableView.frame.origin.y
         }else if gesture.state == .changed {
             /// 持续滑动修改tableView 的Y坐标
-            self.tableView.frame.origin.y = max(self.contentViewOriginY! + point.y - self.tableViewOriginContentOffSetY, self.contentViewMinY!)
+            self.tableView.frame.origin.y = max(self.contentViewOriginY! + point.y - (self.isScrollBgHeaderView ? 0 : self.tableViewOriginContentOffSetY), self.contentViewMinY!)
+            
             /// 布局BgHeaderView 的Y坐标
             setBgHeaderViewFrameY(false)
             
-        }else { /// 结束 或者 取消滑动
+        }else {
+            /// 结束 或者 取消滑动
             endAnimation(self.tableView.frame.origin.y)
         }
     }
@@ -296,6 +301,8 @@ extension LXModalPickerView {
             
             self.contentViewOriginY = isTop ? self.contentViewMinY! : self.contentViewMaxY!
 
+            if isTop {  self.isScrollBgHeaderView = false }
+            
         }else{ /// self.contentViewMaxY <.. UIScreen.main.bounds.height
             
              self.contentViewOriginY =  isTop ? self.contentViewMaxY! : UIScreen.main.bounds.height
@@ -317,16 +324,17 @@ extension LXModalPickerView {
 
 /// 开始动画
    private func starAnimation() {
-       
+    
+        /// 设置默认tableView的Y坐标
          self.tableView.frame.origin.y = UIScreen.main.bounds.height + (bgHeaderView?.frame.height ?? 0)
        
-          /// 设置背景色
+          /// 设置默认背景色
          setbackgroundColor(true)
        
-         /// 布局BgHeaderView 的Y坐标
+         /// 默认布局BgHeaderView 的Y坐标
          setBgHeaderViewFrameY(false)
 
-         /// 布局BgHeaderView 的Y坐标
+         /// 默认布局BgHeaderView 的Y坐标
          self.setBgFooterViewFrameY(false)
 
          UIView.animate(withDuration: animationDuration, animations: {
@@ -348,6 +356,8 @@ extension LXModalPickerView {
    
    /// 结束动画
    private func endAnimation(_ y: CGFloat) {
+    
+//       self.isScrollBgHeaderView = false
        UIView.animate(withDuration: animationDuration, animations: {
            
            if y >= self.contentViewMinY! && y <= self.contentViewMaxY! { /// 最大和最小之间
@@ -400,7 +410,7 @@ extension LXModalPickerView {
             rootView?.addSubview(self)
         }else{
             ///添加view到root视图
-            aboveViewController?.view.addSubview(self)
+            aboveRootView?.addSubview(self)
         }
         
         /// 开始动画
