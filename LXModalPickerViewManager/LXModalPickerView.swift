@@ -232,6 +232,11 @@ extension LXModalPickerView {
     
     /// 手势滑动 事件处理
     @objc private func bgPanGesture(_ gesture: UIPanGestureRecognizer) {
+        
+        /// 滑动控件在减速中。禁止滑动顶部bgHeaderView
+        if self.tableView.isDecelerating  { return }
+          
+        /// 获取偏移量
         let point = gesture.translation(in: gesture.view)
 
         ///滑动bgHeaderView的时候 重置 tableView的偏移量
@@ -428,4 +433,5 @@ extension LXModalPickerView {
     public func reloadData() {
         self.tableView.reloadData()
     }
+    
 }

@@ -78,6 +78,7 @@ extension LXModalPickerView:  UIScrollViewDelegate {
     /// 滚动视图
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y > 0 && Int(self.tableView.frame.origin.y) == Int(self.contentViewMinY!){
+          
         }else{
             /// 处理滑动顶部bgHeaderView的时候tableView偏移量处理
             if self.isScrollBgHeaderView {
@@ -95,4 +96,21 @@ extension LXModalPickerView:  UIScrollViewDelegate {
         self.tableViewOriginContentOffSetY = self.tableView.contentOffset.y
     }
     
+    public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        
+        /// 记录偏移量
+        self.tableViewOriginContentOffSetY = self.tableView.contentOffset.y
+    }
+    
+    public func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+        
+        /// 记录偏移量
+        self.tableViewOriginContentOffSetY = self.tableView.contentOffset.y
+    }
+    
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+        /// 记录偏移量
+        self.tableViewOriginContentOffSetY = self.tableView.contentOffset.y
+    }
 }

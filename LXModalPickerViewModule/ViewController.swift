@@ -82,7 +82,7 @@ extension ViewController: LXModalPickerViewDelegate {
     }
         
     func modalPickerView(_ modalPickerView: LXModalPickerView, tableView: UITableView, scrollViewDidScroll offSetY: CGFloat, isFirst: Bool, isTop: Bool) {
-//          print("=-=-=-=-=-==\(offSetY)====\(isFirst)=====\(isTop)")
+          print("=-=-=-=-=-==\(offSetY)====\(isFirst)=====\(isTop)")
     }
     
     func modalPickerView(_ modalPickerView: LXModalPickerView, tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
