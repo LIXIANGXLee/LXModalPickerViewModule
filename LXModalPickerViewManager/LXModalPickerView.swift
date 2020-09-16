@@ -395,7 +395,11 @@ extension LXModalPickerView {
        }) { (finish) in
            if  y > self.contentViewMaxY! && y <= UIScreen.main.bounds.height{
                let isTop = (y - self.contentViewMaxY! <= UIScreen.main.bounds.height - y) ? true : false
-               if !isTop { self.removeFromSuperview() }
+               if !isTop {
+                /// 动画结束 关闭页面 及回调
+                self.removeFromSuperview()
+                self.delegate?.modalPickerView?(dismiss: self, tableView: self.tableView)
+              }
            }
        }
    }

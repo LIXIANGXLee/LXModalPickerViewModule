@@ -32,6 +32,9 @@ internal protocol LXModalPickerViewCommomDelegate {}
     /// isFirst == true 开始动画 isFirst == false 开始动画后的滑动
     @objc optional func modalPickerView(_ modalPickerView: LXModalPickerView, tableView: UITableView, scrollViewDidScroll offSetY: CGFloat, isFirst: Bool, isTop: Bool)
     
+    /// dimiss 的时候调用
+    @objc optional func modalPickerView(dismiss modalPickerView: LXModalPickerView, tableView: UITableView)
+
 }
 
 // MARK: - 协议  资源

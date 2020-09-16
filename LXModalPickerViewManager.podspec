@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "LXModalPickerViewManager"
-  spec.version      = "3.0.1"
+  spec.version      = "3.1.0"
   spec.summary      = "LXModalPickerViewManager."
 
   # This description is used to generate tags and improve search results.

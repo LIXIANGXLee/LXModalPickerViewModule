@@ -38,9 +38,9 @@ class ViewController: UIViewController {
 //          modal.setContentBackgroundColor = UIColor.clear
         
 //        modal.animationDuration = 5
-//        modal.contentViewMinY = 0
+        modal.contentViewMinY = UIScreen.main.bounds.height * 0.2
 //        
-//        modal.contentViewMaxY = UIScreen.main.bounds.height * 0.75
+        modal.contentViewMaxY = UIScreen.main.bounds.height * 0.75
         
 //        modal.isDismissOfDidSelectBgView = false
        
@@ -86,7 +86,7 @@ extension ViewController: LXModalPickerViewDelegate {
     }
     
     func modalPickerView(_ modalPickerView: LXModalPickerView, tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print("======\(indexPath)")
+        print("======\(indexPath)")
     }
 }
 
